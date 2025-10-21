@@ -25,10 +25,9 @@
 
 .dark {
   --color-mint: oklch(66.813% 0.08103 157.353);
-  --color-white-smoke: oklch(94.099% 0.00692 175.251);
   --color-claret: oklch(39.602% 0.12679 14.189);
   --color-background: oklch(24.671% 0.01666 117.86) 9;
-  --color-foreground: oklch(0.985 0 0);
+  --color-foreground: oklch(94.099% 0.00692 175.251);
   --color-card: oklch(0.205 0 0);
   --color-card-foreground: oklch(0.985 0 0);
   --color-primary: oklch(0.922 0 0);
@@ -46,7 +45,7 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50 transition-colors duration-300 ease-in-out;
+    @apply transition-all duration-300 ease-in-out;
   }
   body {
     @apply bg-background text-foreground antialiased;
@@ -59,7 +58,7 @@
   }
 
   .container {
-    @apply w-full mx-auto px-4 sm:px-8;
+    @apply w-full mx-auto px-2 sm:px-4;
   }
 
   .flex-center {
@@ -81,7 +80,7 @@
 
 @layer utilities {
   .padding-x {
-    @apply px-4 sm:px-8 lg:px-12;
+    @apply px-2 sm:px-4 lg:px-8;
   }
   .padding-y {
     @apply py-8 sm:py-12 lg:py-16;

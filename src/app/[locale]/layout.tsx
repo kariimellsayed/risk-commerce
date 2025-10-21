@@ -5,6 +5,7 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import Header from "@/components/header/Header";
 
 const oswald = Oswald({
   subsets: ["latin"],
@@ -38,6 +39,7 @@ export default async function LocaleLayout({ children, params }: Props) {
             enableSystem
             disableTransitionOnChange
           >
+            <Header />
             {children}
           </ThemeProvider>
         </NextIntlClientProvider>
