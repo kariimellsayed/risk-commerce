@@ -1,0 +1,89 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-mint: oklch(66.813% 0.08103 157.353);
+  --color-white-smoke: oklch(94.099% 0.00692 175.251);
+  --color-claret: oklch(39.602% 0.12679 14.189);
+
+  --color-background: oklch(1 0 0);
+  --color-foreground: oklch(0.145 0 0);
+  --color-card: oklch(1 0 0);
+  --color-card-foreground: oklch(0.145 0 0);
+  --color-primary: oklch(0.205 0 0);
+  --color-primary-foreground: oklch(0.985 0 0);
+  --color-secondary: oklch(0.97 0 0);
+  --color-secondary-foreground: oklch(0.205 0 0);
+  --color-muted: oklch(0.97 0 0);
+  --color-muted-foreground: oklch(0.556 0 0);
+  --color-accent: oklch(0.97 0 0);
+  --color-accent-foreground: oklch(0.205 0 0);
+  --color-destructive: oklch(0.577 0.245 27.325);
+  --color-border: oklch(0.922 0 0);
+  --color-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --color-mint: oklch(66.813% 0.08103 157.353);
+  --color-white-smoke: oklch(94.099% 0.00692 175.251);
+  --color-claret: oklch(39.602% 0.12679 14.189);
+  --color-background: oklch(24.671% 0.01666 117.86) 9;
+  --color-foreground: oklch(0.985 0 0);
+  --color-card: oklch(0.205 0 0);
+  --color-card-foreground: oklch(0.985 0 0);
+  --color-primary: oklch(0.922 0 0);
+  --color-primary-foreground: oklch(0.205 0 0);
+  --color-secondary: oklch(0.269 0 0);
+  --color-secondary-foreground: oklch(0.985 0 0);
+  --color-muted: oklch(0.269 0 0);
+  --color-muted-foreground: oklch(0.708 0 0);
+  --color-accent: oklch(0.269 0 0);
+  --color-accent-foreground: oklch(0.985 0 0);
+  --color-destructive: oklch(0.704 0.191 22.216);
+  --color-border: oklch(1 0 0 / 10%);
+  --color-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50 transition-colors duration-300 ease-in-out;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+@layer components {
+  .section {
+    @apply w-full mx-auto px-4 sm:px-6 py-16;
+  }
+
+  .container {
+    @apply w-full mx-auto px-4 sm:px-8;
+  }
+
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+
+  .flex-col-center {
+    @apply flex flex-col justify-center items-center;
+  }
+
+  .section-title {
+    @apply text-3xl font-bold text-primary mb-8 text-center;
+  }
+}
+
+@layer utilities {
+  .padding-x {
+    @apply px-4 sm:px-8 lg:px-12;
+  }
+  .padding-y {
+    @apply py-8 sm:py-12 lg:py-16;
+  }
+}
